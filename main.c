@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *User_command;
+char *User_command = malloc(sizeof(char));
 void Help() {
 	printf("===Commands===\n");
 	printf("** a: addition\n");
