@@ -64,6 +64,20 @@ void subtraction() {
 	free(val2);
 	free(result);
 }
+void sine() {
+	double* angle = malloc(sizeof(double));
+	double* result = malloc(sizeof(double));
+
+	printf("Enter the angle: ");
+	scanf("%lf", angle);
+
+	*result = sin(*angle);
+
+	printf("The result is: %lf \n", *result);
+
+	free(angle);
+	free(result);
+}
 void multiplication() {
 	double* val1 = malloc(sizeof(double));
 	double* val2 = malloc(sizeof(double));
