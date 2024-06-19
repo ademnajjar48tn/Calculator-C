@@ -55,7 +55,7 @@ void subtraction() {
 	printf("Enter second value: ");
 	scanf("%lf", val2);
 
-	*result = *val1 + *val2;
+	*result = *val1 - *val2;
 
 	printf("The result is: %lf \n", *result);
 
