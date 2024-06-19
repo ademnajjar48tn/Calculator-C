@@ -63,6 +63,24 @@ void subtraction() {
 	free(val2);
 	free(result);
 }
+void multiplication() {
+	double* val1 = malloc(sizeof(double));
+	double* val2 = malloc(sizeof(double));
+	double* result = malloc(sizeof(double));
+
+	printf("Enter first value: ");
+	scanf("%lf", val1);
+	printf("Enter second value: ");
+	scanf("%lf", val2);
+
+	*result = *val1 + *val2;
+
+	printf("The result is: %lf \n", *result);
+
+	free(val1);
+	free(val2);
+	free(result);
+}
 int main() {
 
 	return 0;
