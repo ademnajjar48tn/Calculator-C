@@ -160,6 +160,20 @@ void cosine() {
 	free(radian);
 	free(result);
 }
+void tangent() {
+	double* val = malloc(sizeof(double));
+	double* result = malloc(sizeof(double));
+
+	printf("Enter the value: ");
+	scanf("%lf", val);
+
+	*result = tan(*val);
+
+	printf("The result is %lf \n", *result);
+
+	free(val);
+	free(result);
+}
 int main() {
 
 	return 0;
