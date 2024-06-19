@@ -114,6 +114,24 @@ void squareroot() {
 	free(val);
 	free(result);
 }
+void power() {
+	double* base = malloc(sizeof(double));
+	double* exponent = malloc(sizeof(double));
+	double* result = malloc(sizeof(double));
+
+	printf("Enter the base: ");
+	scanf("%lf", base);
+	printf("Enter the exponent: ");
+	scanf("%lf", exponent);
+	
+	*result = pow(*base, *exponent);
+
+	printf("The result is %lf \n", *result);
+
+	free(base);
+	free(exponent);
+	free(result);
+}
 int main() {
 
 	return 0;
