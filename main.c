@@ -81,6 +81,24 @@ void multiplication() {
 	free(val2);
 	free(result);
 }
+void division() {
+	double* dividend = malloc(sizeof(double));
+	double* divisor = malloc(sizeof(double));
+	double* result = malloc(sizeof(double));
+
+	printf("Enter the dividend: ");
+	scanf("%lf", dividend);
+	printf("Enter the divisor: ");
+	scanf("%lf", divisor);
+
+	*result = (*dividend) / (*divisor);
+
+	printf("The result is %lf \n", *result);
+
+	free(dividend);
+	free(divisor);
+	free(result);
+}
 int main() {
 
 	return 0;
