@@ -1,5 +1,6 @@
 #include <stdiolib>
 
+char User_command;
 void Help() {
 	printf("===Commands===");
 	printf("** a: addition");
@@ -19,8 +20,10 @@ void Greet() {
 	printf("\n\n\n");
 	Help();
 }
-int main()
-{
+void GetUserCommand() {
+	scanf("%c" , User_command);
+}
+int main() {
 
 	return 0;
 }
