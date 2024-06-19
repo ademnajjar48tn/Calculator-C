@@ -14,6 +14,11 @@ void Help() {
 	printf("==============");
 
 }
+void Greet() {
+	printf("-----Calculator-App-----");
+	printf("\n\n\n");
+	Help();
+}
 int main()
 {
 
