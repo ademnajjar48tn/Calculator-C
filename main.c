@@ -146,6 +146,20 @@ void power() {
 	free(exponent);
 	free(result);
 }
+void cosine() {
+	double* radian = malloc(sizeof(double));
+	double* result = malloc(sizeof(double));
+
+	printf("Enter the radian: ");
+	scanf("%lf", radian);
+
+	*result = cos(*radian);
+
+	printf("The result is %lf \n", *result);
+
+	free(radian);
+	free(result);
+}
 int main() {
 
 	return 0;
