@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-char *User_command = malloc(sizeof(char));
+char *User_command;
 void Help() {
 	printf("===Commands===\n");
 	printf("** a: addition\n");
@@ -11,9 +11,10 @@ void Help() {
 	printf("** d: division **\n");
 	printf("** r: squreroot **\n");
 	printf("** p: power **\n");
-	printf("** s: sine **\n");
+	printf("** i: sine **\n");
 	printf("** c: cosine **\n");
 	printf("** t: tangent **\n");
+	printf("** h: help **\n");
 	printf("==============\n");
 
 }
@@ -174,7 +175,74 @@ void tangent() {
 	free(val);
 	free(result);
 }
-int main() {
+void CheckUserCommand() {
+	switch(*User_command) {
+		case 'a':
+			addition();
+			GetUserCommand();
+			CheckUserCommand();
+			break;
+		case 's':
+			subtraction();
+			GetUserCommand();
+			CheckUserCommand();
+			break;
+		case 'm':
+			multiplication();
+			GetUserCommand();
+			CheckUserCommand();
+			break;
+		case 'd':
+			division();
+			GetUserCommand();
+			CheckUserCommand();
+			break;
+		case 'r':
+			squareroot();
+			GetUserCommand();
+			CheckUserCommand();
+			break;
+		case 'p':
+			power();
+			GetUserCommand();
+			CheckUserCommand();
+			break;
+		case 'i':
+			sine();
+			GetUserCommand();
+			CheckUserCommand();
+			break;
+		case 'c':
+			cosine();
+			GetUserCommand();
+			CheckUserCommand();
+			break;
+		case 't':
+			tangent();
+			GetUserCommand();
+			CheckUserCommand();
+			break;
+		case 'h':
+			Help();
+			GetUserCommand();
+			CheckUserCommand();
+			break;
+		case 'e':
+			exit(EXIT_SUCCESS);
+			break;
+		default:
+			printf("(Unknown commad)  Please Try again");
+			GetUserCommand();
+			CheckUserCommand();
+			break;
 
+	}
+}
+int main() {
+	User_command = malloc(sizeof(char));
+	Greet();
+	GetUserCommand();
+	CheckUserCommand();
+	free(User_command);
 	return 0;
 }
